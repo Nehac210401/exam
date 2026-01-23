@@ -1,0 +1,19 @@
+.visit, .website, .openingtimings, .feedbackform{
+    margin-bottom: 100px;
+}
+.timing{
+    text-align: center;
+}
+.bookstore{
+    width: 400px;
+}
+.openingtimings{
+    font-size: large;
+    color: cornflowerblue;
+}
+.holiday{
+    color: red;
+}
+ul{
+    list-style: none;
+}
