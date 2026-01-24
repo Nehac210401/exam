@@ -27,9 +27,7 @@ function Contactus() {
       <section className="website">
         <p>You can also visit our website for more information</p>
 
-        <Link to="/" className="btn btnprimary">
-          Home
-        </Link>
+      
       </section>
 
       {/* Opening Timings Section */}
