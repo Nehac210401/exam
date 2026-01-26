@@ -47,8 +47,7 @@ src/
 ## 🔐 Login Logic (Home Page)
 
 * Login form is displayed using **conditional rendering**
-* Uses `useState` to track login status
-* No backend authentication (UI-only for learning purposes)
+* Uses `useState` to track login status.
 
 ---
 
@@ -65,7 +64,7 @@ src/
 Example API:
 
 ```
-https://openlibrary.org/search.json?title=harry+potter
+https://openlibrary.org/search.json?title=
 ```
 
 ---
@@ -103,6 +102,3 @@ http://localhost:5173
 ```
 
 ---
-
-Jeanette’s Bookstore Project
-Built as a learning project using React & Vite ❤️
