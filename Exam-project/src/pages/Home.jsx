@@ -34,7 +34,7 @@ function Home() {
              <form onSubmit={handleLogin}>
             <input
               type="text"
-              placeholder="Enter your name"
+              placeholder="Please enter your UserId number"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
