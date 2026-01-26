@@ -1,8 +1,22 @@
 
+import {useState} from "react";
 import { Link } from "react-router-dom";
 import "./Contactus.css";
 
 function Contactus() {
+  const MAX_CHAR = 1000;
+  const [text, setText] = useState("");
+
+  const handleSubmit =(e) => {
+    e.preventDefault(); 
+    if (text.trim() === "") {
+      alert ("Please write before submitting");
+      return;
+    }
+    console.log("Feedback Submitted", text);
+    alert("Thank you for your feedback!");
+    setText("");
+  };
   
 
   return (
@@ -26,8 +40,6 @@ function Contactus() {
       {/* Website Section */}
       <section className="website">
         <p>You can also visit our website for more information</p>
-
-      
       </section>
 
       {/* Opening Timings Section */}
@@ -41,11 +53,27 @@ function Contactus() {
           <li className="holiday">Sunday: Closed</li>
         </ul>
       </section>
+      <section className="feedbackform">
+        <h3>Penny for your thoughts</h3>
+        <form onSubmit={handleSubmit}>
+          <textarea 
+          className="textarea"
+          placeholder="Please write here..."
+          maxLength={MAX_CHAR}
+          value={text}
+          onChange={(e) => setText(e.target.value)} />
 
+          <div className="counter-container">
+            <p>Total Characters: <span className="total-counter">{text.length}</span></p>
+            <p>Remaining: <span className="remaining-counter">{MAX_CHAR - text.length}</span></p>
+          </div>
+          <button type="submit" className="btn btnprimary">Submit Feedback</button>
+        </form>
+      </section>
     </div>
    
     </>
-  )
+  );
 }
 
 export default Contactus;

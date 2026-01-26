@@ -16,9 +16,7 @@ function Header() {
           <Link className="btn" to="/contact">Contact Us</Link>
         </li>
         <li>
-          <Link className="btn" to="/search">
-            Search <i className="fa-solid fa-magnifying-glass"></i>
-          </Link>
+      
         </li>
       </ul>
     </header>
