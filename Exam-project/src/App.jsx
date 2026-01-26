@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Books from './pages/Books';
 import Contactus from './pages/Contactus';
+import NotFound from "./pages/NotFound";
 
 
 import './App.css'
@@ -19,9 +20,12 @@ function App() {
        <div>
       <Header />  {/* This must be here */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/contact" element={<Contactus />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/books" element={<Books />} />
+      <Route path="/contact" element={<Contactus />} />
+
+  {/* 404 page – ALWAYS LAST */}
+      <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
       </div>
