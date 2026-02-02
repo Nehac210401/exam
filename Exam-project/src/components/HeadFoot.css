@@ -20,12 +20,15 @@ header{
     gap: 20px;
     list-style: none;
 }
-footer{
+.footer{
     text-align: center;
     background-color: #f3c0c0cb;
     border-top: 2px solid #f1becdb1;
     bottom: 0;
     width: 100%;
     padding: 10px 0;
-    margin-top: 100px;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+
 }
