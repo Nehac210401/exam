@@ -4,7 +4,10 @@ import "./Book.css";
 function Books() {
   const [searchWord, setSearchWord] = useState("");
   const [searchResult, setSearchResult] = useState("");
+<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
+=======
+>>>>>>> 90313a438c46ea6ff32c85610ee6cbe1a4ad34be
 
   function getRandomBookNames() {
     if (searchWord === "") {
@@ -12,9 +15,12 @@ function Books() {
       return;
     }
 
+<<<<<<< HEAD
     setLoading (true);
     setSearchResult("");
 
+=======
+>>>>>>> 90313a438c46ea6ff32c85610ee6cbe1a4ad34be
     fetch(`https://openlibrary.org/search.json?title=${searchWord}`)
       .then((response) => response.json())
       .then((data) => {
@@ -29,6 +35,7 @@ function Books() {
 
           setSearchResult(`📖 ${title} by ${author}`);
         }
+<<<<<<< HEAD
         setLoading(false);
       })
       .catch(() => {
@@ -36,6 +43,12 @@ function Books() {
         setLoading(false);
       });
       
+=======
+      })
+      .catch(() => {
+        setSearchResult("Something went wrong");
+      });
+>>>>>>> 90313a438c46ea6ff32c85610ee6cbe1a4ad34be
   }
 
   return (
@@ -57,11 +70,17 @@ function Books() {
           🔍
         </button>
       </div>
+<<<<<<< HEAD
       <div>
       {loading ? <p>Loading...</p> : <p>{searchResult}</p> }
       </div>
+=======
+
+      <p>{searchResult}</p>
+>>>>>>> 90313a438c46ea6ff32c85610ee6cbe1a4ad34be
     </div>
   );
 }
 
 export default Books;
+
