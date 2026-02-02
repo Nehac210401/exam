@@ -21,6 +21,8 @@ header{
     list-style: none;
 }
 .footer{
+     display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: #f3c0c0cb;
     border-top: 2px solid #f1becdb1;
@@ -28,7 +30,4 @@ header{
     width: 100%;
     padding: 10px 0;
     margin-top: 300px;
-    display: flex;
-    flex-direction: column;
-
 }
