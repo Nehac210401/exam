@@ -12,7 +12,6 @@ function Header() {
   return (
     <header>
       <ul className="navheader">
-<<<<<<< HEAD
         {navItems.map((item) => 
         <li key={item.path}>
           <NavLink to={item.path}
@@ -25,24 +24,6 @@ function Header() {
          </header>
          );
        }
-=======
-        <li>
-          <Link className="btn" to="/">Home</Link>
-        </li>
-        <li>
-          <Link className="btn" to="/books">Books</Link>
-        </li>
-        <li>
-          <Link className="btn" to="/contact">Contact Us</Link>
-        </li>
-        <li>
-      
-        </li>
-      </ul>
-    </header>
-  );
-}
->>>>>>> 90313a438c46ea6ff32c85610ee6cbe1a4ad34be
 
       export default Header;
 
