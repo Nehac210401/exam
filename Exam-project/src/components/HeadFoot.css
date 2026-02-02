@@ -21,7 +21,7 @@ header{
     list-style: none;
 }
 .footer{
-     display: flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
     background-color: #f3c0c0cb;
