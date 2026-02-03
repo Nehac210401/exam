@@ -4,9 +4,6 @@
 .timing{
     text-align: center;
 }
-.bookstore{
-    width: 400px;
-}
 .openingtimings{
     font-size: large;
     color: cornflowerblue;
@@ -17,11 +14,11 @@
 ul{
     list-style: none;
 }
-.container{
-    background-color: floralwhite;
-    width: 1000px;
-    padding: 40px;
-    border-radius: 30px;
+.counter-container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
 }
 .textarea{
     resize:none;
@@ -46,15 +43,18 @@ ul{
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 8px;
+    justify-content: center;
 }
 .btnprimary{
     font-size: 16px;
     text-decoration: none;
     padding: 20px 40px;
     border-radius: 10px;
-    display: block;
+    display: inline-block;
     width: 200px;
     text-align: center;
+    justify-content: center;
+    cursor:pointer;
 }
 .btnprimary:hover,
 .btnprimary:active {
