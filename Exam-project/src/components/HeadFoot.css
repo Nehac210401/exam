@@ -20,10 +20,11 @@ header{
     gap: 20px;
     list-style: none;
 }
-.footer{
+.socialmedia{
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
     background-color: #f3c0c0cb;
     border-top: 2px solid #f1becdb1;
     bottom: 0;

@@ -1,12 +1,15 @@
 .search-box{
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
     margin: 20px;
+    border: none;
+    border-radius: 10px;
 }
 #searchInput{
-    padding: 10px;
-    width: 250px;
+    padding: 30px;
+    width: 300px;
+    border: none;
 }
 #searchBtn{
     cursor: pointer;
@@ -16,6 +19,7 @@
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 8px;
+    border: none;
 }
 .btnprimary{
     font-size: 16px;
@@ -33,7 +37,9 @@
     box-shadow: 0 4px 10px rgba(174, 101, 101, 0.422);
 }
 h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
     text-align: center;
+    letter-spacing: -1;
+    font-weight: bolder;
 }
