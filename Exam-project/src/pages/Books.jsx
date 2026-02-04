@@ -26,7 +26,7 @@ function Books() {
         .then((response) => response.json())
         .then((data) => {
           if (data.docs.length === 0) {
-            setSearchResult("No books found");
+            setSearchResult("Ingen bok hittades");
           } else {
             const book = data.docs[0];
             const title = book.title;
@@ -37,7 +37,7 @@ function Books() {
           setLoading(false);
         })
         .catch(() => {
-          setSearchResult("Something went wrong");
+          setSearchResult("Något gick fel, förska igen");
           setLoading(false);
         });
     },
@@ -55,7 +55,7 @@ function Books() {
 
   return (
     <div className="books">
-      <h1>Discover Books here 📚</h1>
+      <h1>Hitta bok här 📚</h1>
 
       <div className="search-box">
         <input

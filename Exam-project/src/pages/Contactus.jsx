@@ -10,11 +10,11 @@ function Contactus() {
   const handleSubmit =(e) => {
     e.preventDefault(); 
     if (text.trim() === "") {
-      alert ("Please write before submitting");
+      alert ("Vänligen skriv innan du skickar in");
       return;
     }
     console.log("Feedback Submitted", text);
-    alert("Thank you for your feedback!");
+    alert("Tack för feedbacken!");
     setText("");
   };
   
@@ -25,11 +25,11 @@ function Contactus() {
 
       {/* Visit Section */}
       <section className="visit">
-        <h3>Visit us at</h3>
+        <h3>Besök oss</h3>
 
         <p className="address">
-          ShopCenturm, Shop No 12, <br />
-          12578, Malmö.
+          KöpCentrum, köp nummer 12, <br />
+          12578, Uppsala.
           <br />
           <i className="fa-solid fa-phone"></i>: 76903783
           <br />
@@ -39,22 +39,22 @@ function Contactus() {
 
       {/* Website Section */}
       <section className="website">
-        <p>You can also visit our website for more information</p>
+        <p>Du kan hitta mer information på vår webplast.</p>
       </section>
 
       {/* Opening Timings Section */}
       <section className="openingtimings">
-        <h3>Our Opening Timing</h3>
+        <h3>Oppnings Tider</h3>
 
         <ul className="timing">
-          <li>Monday - Thursday: 10am to 18pm</li>
-          <li>Friday: 10am to 20pm</li>
-          <li>Saturday: 10am to 14pm</li>
-          <li className="holiday">Sunday: Closed</li>
+          <li>Måndagen - Torsdagen: 10am to 18pm</li>
+          <li>Fredagen: 10am to 20pm</li>
+          <li>Lördagen: 10am to 14pm</li>
+          <li className="holiday">Söndagen: Stäng</li>
         </ul>
       </section>
       <section className="feedbackform">
-        <h3>Penny for your thoughts</h3>
+        <h3>Örn för dina tankar om oss</h3>
         <form onSubmit={handleSubmit}>
           <textarea 
           className="textarea"
