@@ -10,7 +10,7 @@ function Home() {
     e.preventDefault();
 
     if (username.trim() === "") {
-      alert("Please enter your name");
+      alert("Vängliga skriv din UserID");
       return;
     }
 
