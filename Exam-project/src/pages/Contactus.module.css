@@ -1,0 +1,84 @@
+.about-us {
+  width: 100%;
+}
+
+/* Sections */
+.visit,
+.website,
+.openingtimings,
+.feedbackform {
+  margin-bottom: 100px;
+}
+
+/* Opening times */
+.openingtimings {
+  font-size: large;
+  color: cornflowerblue;
+}
+
+.timing {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.holiday {
+  color: red;
+}
+
+/* Feedback form */
+.textarea {
+  resize: none;
+  width: 100%;
+  height: 500px;
+  font-size: 16px;
+  padding: 30px;
+  border: solid 5px black;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.counter-container p {
+  font-size: 20px;
+  color: darkblue;
+}
+
+.total-counter {
+  color: green;
+}
+
+.remaining-counter {
+  color: cadetblue;
+}
+
+/* Buttons */
+.btn {
+  font-size: 16px;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.btnprimary {
+  font-size: 16px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.btnprimary:hover,
+.btnprimary:active {
+  color: #fceaea;
+  background-color: #c56471a7;
+  box-shadow: 0 4px 10px rgba(174, 101, 101, 0.422);
+}

@@ -1,46 +1,52 @@
 
-.search-box{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px;
-    border: none;
-    border-radius: 10px;
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
 }
-#searchInput{
-    padding: 30px;
-    width: 300px;
-    border: none;
+
+.search-input {
+  padding: 30px;
+  width: 300px;
+  border: none;
 }
-#searchBtn{
-    cursor: pointer;
+
+.search-btn {
+  cursor: pointer;
 }
+
 .btn {
-    font-size: 16px;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    border: none;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
 }
-.btnprimary{
-    font-size: 16px;
-    text-decoration: none;
-    padding: 20px 40px;
-    border-radius: 10px;
-    display: block;
-    width: 200px;
-    text-align: center;
+
+.btnprimary {
+  font-size: 16px;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 10px;
+  display: block;
+  width: 200px;
+  text-align: center;
 }
+
 .btnprimary:hover,
 .btnprimary:active {
-    color: #fceaea;
-    background-color: #c56471a7;
-    box-shadow: 0 4px 10px rgba(174, 101, 101, 0.422);
+  color: #fceaea;
+  background-color: #c56471a7;
+  box-shadow: 0 4px 10px rgba(174, 101, 101, 0.422);
 }
-h1{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    letter-spacing: -1;
-    font-weight: bolder;
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: -1px;
+  font-weight: bolder;
 }
