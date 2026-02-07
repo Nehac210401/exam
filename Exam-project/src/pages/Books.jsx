@@ -1,11 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
+import BookDetails from "../components/BookDetails";
 import "./Book.css";
 
 function Books() {
   const [searchWord, setSearchWord] = useState("");
+  const [book, setBook] = useState(null);
   const [searchResult, setSearchResult] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+ 
 
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("query") || "";
@@ -21,23 +25,31 @@ function Books() {
 
       setLoading(true);
       setSearchResult("");
+      setBook(null);
+      setIsFavorite(false);
 
       fetch(`https://openlibrary.org/search.json?title=${search}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.docs.length === 0) {
             setSearchResult("Ingen bok hittades");
+            setBook(null);
           } else {
-            const book = data.docs[0];
-            const title = book.title;
-            const author = book.author_name ? book.author_name[0] : "Unknown";
+            const foundBook = data.docs[0];
 
-            setSearchResult(`📖 ${title} by ${author}`);
+            setBook({
+              tittle: foundBook.title,
+              author: foundBook.author_name
+                ? foundBook.author_name[0]
+                : "Unknown",
+            });
+            setSearchResult("");
           }
           setLoading(false);
         })
         .catch(() => {
           setSearchResult("Något gick fel, förska igen");
+          setBook(null);
           setLoading(false);
         });
     },
@@ -46,6 +58,7 @@ function Books() {
 
   // Trigger search if query exists
   useEffect(() => {
+    
     if (query) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setSearchWord(query);
@@ -72,9 +85,20 @@ function Books() {
         </button>
       </div>
 
-      <div>{loading ? <p>Loading...</p> : <p>{searchResult}</p>}</div>
-    </div>
-  );
+        
+       {loading && <p>Loading...</p>}
+
+    {!loading && book && (
+      // ✅ Use BookDetails here
+      <BookDetails
+        book={book}
+        isFavorite={isFavorite}
+        onToggleFavorite={() => setIsFavorite(prev => !prev)}
+      />
+    )}
+     {!loading && searchResult && <p>{searchResult}</p>}
+  </div>
+);
 }
 
 export default Books;
