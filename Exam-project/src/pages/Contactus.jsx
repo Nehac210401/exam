@@ -18,7 +18,7 @@ export default function Contactus() {
     console.log("Feedback Submitted", text);
     setMessage("Tack för feedbacken!!");
     setText("");
-     setTimeout(() => setMessage(""), 3000);
+     setTimeout(() => setMessage(""), 5000);
   };
 
   return (
