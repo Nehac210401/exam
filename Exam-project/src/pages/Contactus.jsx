@@ -5,6 +5,7 @@ import styles from "./Contactus.module.css";
 export default function Contactus() {
   const MAX_CHAR = 1000;
   const [text, setText] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +16,9 @@ export default function Contactus() {
     }
 
     console.log("Feedback Submitted", text);
-    alert("Tack för feedbacken!");
+    setMessage("Tack för feedbacken!!");
     setText("");
+     setTimeout(() => setMessage(""), 3000);
   };
 
   return (
@@ -51,6 +53,7 @@ export default function Contactus() {
       {/* Feedback Form */}
       <section className={styles.feedbackform}>
         <h3>Örn för dina tankar om oss</h3>
+         {message && <p className={styles.feedbackMessage}>{message}</p>}
         <form onSubmit={handleSubmit}>
           <textarea
             className={styles.textarea}
@@ -72,6 +75,7 @@ export default function Contactus() {
           <button type="submit" className={`${styles.btn} ${styles.btnprimary}`}>
             Submit Feedback
           </button>
+          {message && <p className={styles.feedbackMessage}>{message}</p>}
         </form>
       </section>
     </div>
